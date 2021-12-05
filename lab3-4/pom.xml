@@ -5,8 +5,8 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>org.example</groupId>
-    <artifactId>lab1-2</artifactId>
-    <version>1.0-SNAPSHOT</version>
+    <artifactId>lab3-4</artifactId>
+    <version>1.0</version>
 
     <properties>
         <maven.compiler.source>8</maven.compiler.source>
@@ -19,7 +19,13 @@
             <version>4.2.0</version>
             <artifactId>jade</artifactId>
             <scope>system</scope>
-            <systemPath>${project.basedir}/src/main/java/jade.jar</systemPath>
+            <systemPath>${project.basedir}/src/main/resources/jade.jar</systemPath>
+        </dependency>
+        <dependency>
+            <groupId>org.jetbrains</groupId>
+            <artifactId>annotations</artifactId>
+            <version>RELEASE</version>
+            <scope>compile</scope>
         </dependency>
     </dependencies>
 

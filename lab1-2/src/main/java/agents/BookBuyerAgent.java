@@ -91,7 +91,7 @@ public class BookBuyerAgent extends Agent {
                             MessageTemplate.MatchConversationId("book-trade"),
                             MessageTemplate.MatchInReplyTo(cfp.getReplyWith())
                     );
-                    step = 1;
+                    step++;
                     break;
                 case 1:
                     ACLMessage reply = myAgent.receive(mt);
@@ -107,7 +107,7 @@ public class BookBuyerAgent extends Agent {
 
                         repliesCnt++;
                         if (repliesCnt >= sellerAgents.length) {
-                            step = 2;
+                            step++;
                         }
 
                     } else {
@@ -129,7 +129,7 @@ public class BookBuyerAgent extends Agent {
                             MessageTemplate.MatchConversationId("book-trade"),
                             MessageTemplate.MatchInReplyTo(order.getReplyWith())
                     );
-                    step = 3;
+                    step++;
                     break;
                 case 3:
                     reply = myAgent.receive(mt);
@@ -146,7 +146,7 @@ public class BookBuyerAgent extends Agent {
                             System.out.println("Attempt failed: requested book already sold.");
                         }
 
-                        step = 4;
+                        step++;
                     } else {
                         block();
                     }
