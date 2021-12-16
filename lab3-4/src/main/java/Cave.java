@@ -168,7 +168,7 @@ public class Cave {
                 if (cell.equals(gold)) txt += "G ";
                 if (cell.equals(wumpus)) txt += "W ";
                 if (isPit(cell)) txt += "P ";
-                if (txt.isEmpty()) txt = ". ";
+                if (txt.isEmpty()) txt = "_ ";
 
                 builder.append(txt);
             }

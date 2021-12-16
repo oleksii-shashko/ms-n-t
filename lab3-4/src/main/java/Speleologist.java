@@ -22,7 +22,7 @@ public class Speleologist extends Agent {
     protected void setup() {
         System.out.println("Speleologist: The speleologist agent " + getAID().getName() + " is ready.");
 
-        addBehaviour(new TickerBehaviour(this, 10000) {
+        addBehaviour(new TickerBehaviour(this, 5000) {
             @Override
             protected void onTick() {
                 myAgent.addBehaviour(new FindWumpusWorld());
